@@ -1,38 +1,443 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+/* HERO SECTION */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero img {
+  position: absolute;
+  width: 100%;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* GRADIENT OVERLAY */
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%, black);
+  z-index: 3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* BACKGROUND LAYERS */
+
+.back-1 { z-index: 1; }
+.back-2 { z-index: 2; }
+.back-3 { z-index: 3; }
+.back-4 { z-index: 4; }
+
+/* HEADER */
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  padding: 10px 5%;
+}
+
+/* LOGO */
+
+.logo {
+  width: 140px;
+  z-index: 21;
+}
+
+/* NAVBAR */
+
+.nav {
+  display: flex;
+  gap: 10px;
+
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+/* NAV LINKS */
+
+.nav a {
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #353535;
+
+  width: 110px;
+  text-align: center;
+
+  padding: 12px 0;
+
+  border-radius: 20px;
+
+  transition: 0.3s;
+}
+
+/* ACTIVE LINK */
+
+.nav a:hover {
+  background: #16423c;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* MOBILE MENU BUTTON */
+
+.menu-btn {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  z-index: 21;
 }
 
-@keyframes App-logo-spin {
+/* HERO TITLE */
+
+.title {
+  position: absolute;
+  top: 40%;
+  right: 50%;
+
+  transform: translate(50%, -50%);
+  z-index: 3;
+}
+
+.title h3 {
+  font-size: 1.5rem;
+  letter-spacing: 15px;
+  color: white;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 12rem;
+  letter-spacing: 50px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* HERO INFO */
+
+.info-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 18%;
+
+  z-index: 10;
+}
+
+p {
+  font-size: 14px;
+  width: 70%;
+  text-align: center;
+
+  color: rgba(255,255,255,0.8);
+}
+
+/* CTA BUTTON */
+
+.cta {
+  position: absolute;
+  bottom: 8%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  z-index: 10;
+}
+
+.cta button {
+
+  font-size: 18px;
+
+  letter-spacing: 3px;
+
+  color: white;
+
+  background: transparent;
+
+  border: 1px solid white;
+
+  border-radius: 50px;
+
+  height: 50px;
+  width: 260px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.cta button:hover {
+
+  background: white;
+  color: #333;
+
+}
+
+/* SLIDER */
+
+.slider {
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  z-index: 10;
+
+}
+
+.slider i {
+
+  padding: 0 5%;
+
+  font-size: 36px;
+
+  color: rgba(255,255,255,0.4);
+
+}
+
+/* HERO TEXT */
+
+#text {
+
+  position: absolute;
+
+  top: 40%;
+
+  width: 100%;
+
+  text-align: center;
+
+  font-size: 6rem;
+
+  color: white;
+
+  z-index: 10;
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 900px){
+
+.nav{
+
+position: absolute;
+
+top: 70px;
+
+right: -100%;
+
+flex-direction: column;
+
+background: white;
+
+padding: 20px;
+
+transition: 0.3s;
+
+}
+
+.nav.active{
+
+right: 5%;
+
+}
+
+.menu-btn{
+
+display:block;
+
+}
+
+}
+
+/* =========================
+PARALLAX IMAGE ENTRY ANIMATION
+========================= */
+
+.content img {
+  position: absolute;
+  bottom: -12%;
+  width: 100%;
+}
+
+/* mountain layer entry */
+
+@keyframes bottomIn {
   from {
-    transform: rotate(0deg);
+    transform: translateY(200px);
+    opacity: 0;
   }
+
   to {
-    transform: rotate(360deg);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
+
+.back-1 {
+  animation: bottomIn 1s cubic-bezier(.2,.7,.1,1) forwards;
+}
+
+.back-2 {
+  animation: bottomIn 1.3s cubic-bezier(.2,.7,.1,1) forwards;
+}
+
+.back-3 {
+  animation: bottomIn 1.5s cubic-bezier(.2,.7,.1,1) forwards;
+}
+
+.back-4 {
+  animation: bottomIn 1.7s cubic-bezier(.2,.7,.1,1) forwards;
+}
+
+
+/* =========================
+TEXT ENTRY ANIMATION
+========================= */
+
+@keyframes bottomInText {
+
+  from {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+.title h3 {
+  animation: bottomInText 1s ease-out forwards;
+}
+
+.title h1 {
+  animation: bottomInText 1.2s ease-out forwards;
+}
+
+.info-wrap p {
+  animation: bottomInText 1.2s ease-out forwards;
+  animation-delay: .2s;
+  opacity: 0;
+}
+
+.cta button {
+  animation: bottomInText 1.2s ease-out forwards;
+  animation-delay: .3s;
+  opacity: 0;
+}
+
+
+/* =========================
+NAVBAR ENTRY ANIMATION
+========================= */
+
+@keyframes topIn {
+
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+.nav {
+  animation: topIn 1.2s ease-out forwards;
+}
+
+
+/* =========================
+SLIDER ICON ENTRY ANIMATION
+========================= */
+
+@keyframes zoomOut {
+
+  from {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+.slider {
+  animation: zoomOut 1.2s ease-out forwards;
+}
+
+
+/* =========================
+BODY BACKGROUND PAN EFFECT
+========================= */
+
+@keyframes backgroundImage {
+
+  from {
+    background-position: top;
+  }
+
+  to {
+    background-position: 50% 14%;
+  }
+
+}
+
+body {
+  animation: backgroundImage 1.6s ease-out forwards;
+}
+.content {
+  position: absolute;
+  inset: 0;
+}
+.back-4 { z-index: 1; }
+.back-3 { z-index: 2; }
+.back-2 { z-index: 3; }
+.back-1 { z-index: 4; }
