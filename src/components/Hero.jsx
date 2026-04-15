@@ -27,7 +27,7 @@ export default function Hero() {
 
   return (
 
-    <section className="hero">
+    <section id="home" className="hero">
 
     <div key={index} className="content">
   <img src={slide.images[0]} className="back-4" alt="" />

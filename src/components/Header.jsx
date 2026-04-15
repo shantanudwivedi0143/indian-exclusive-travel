@@ -16,10 +16,10 @@ export default function Header() {
 
       <nav className={menu ? "nav active" : "nav"}>
 
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#destination">Destination</a>
-        <a href="#contact">Contact</a>
+       <a href="#home" onClick={() => setMenu(false)}>Home</a>
+      <a href="#about" onClick={() => setMenu(false)}>About</a>
+      <a href="#destination" onClick={() => setMenu(false)}>Destination</a>
+      <a href="#contact" onClick={() => setMenu(false)}>Contact</a>
 
       </nav>
 
