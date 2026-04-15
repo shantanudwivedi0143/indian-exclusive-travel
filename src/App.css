@@ -18,10 +18,15 @@ body {
 /* HERO SECTION */
 
 .hero {
+
   position: relative;
-  width: 100%;
+
   height: 100vh;
+
+  width: 100%;
+
   overflow: hidden;
+
 }
 
 .hero img {
@@ -135,10 +140,37 @@ body {
 }
 
 .title h1 {
-  font-size: 12rem;
-  letter-spacing: 50px;
+
   text-transform: uppercase;
+
   color: white;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  animation: bottomInText 1.2s ease-out forwards;
+
+}
+
+.hero-title-xl {
+  font-size: 14rem;
+  letter-spacing: 60px;
+}
+
+.hero-title-lg {
+  font-size: 10rem;
+  letter-spacing: 40px;
+}
+
+.hero-title-md {
+  font-size: 7rem;
+  letter-spacing: 25px;
+}
+
+.hero-title-sm {
+  font-size: 5rem;
+  letter-spacing: 15px;
 }
 
 /* HERO INFO */
@@ -293,9 +325,15 @@ PARALLAX IMAGE ENTRY ANIMATION
 ========================= */
 
 .content img {
+
   position: absolute;
+
   bottom: -12%;
+
   width: 100%;
+
+  transform: translateY(0);
+
 }
 
 /* mountain layer entry */
@@ -441,3 +479,17 @@ body {
 .back-3 { z-index: 2; }
 .back-2 { z-index: 3; }
 .back-1 { z-index: 4; }
+
+.about {
+
+  position: relative;
+
+  background: black;
+
+  color: white;
+
+  padding: 120px 8%;
+
+  z-index: 20;
+
+}
