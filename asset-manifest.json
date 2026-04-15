@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/indian-exclusive-travel/static/css/main.897101af.css",
+    "main.js": "/indian-exclusive-travel/static/js/main.c2c361ec.js",
+    "index.html": "/indian-exclusive-travel/index.html",
+    "main.897101af.css.map": "/indian-exclusive-travel/static/css/main.897101af.css.map",
+    "main.c2c361ec.js.map": "/indian-exclusive-travel/static/js/main.c2c361ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.897101af.css",
+    "static/js/main.c2c361ec.js"
+  ]
+}
