@@ -1,32 +1,63 @@
+import "./Destination.css";
 export default function Destination() {
 
-  return (
+const destinations = [
+  {
+    name: "Rajasthan",
+    img: `${process.env.PUBLIC_URL}/assets/raj-4.jpg`
+  },
+  {
+    name: "Kerala",
+    img: `${process.env.PUBLIC_URL}/assets/bac 4.png`
+  },
+  {
+    name: "Ladakh",
+    img: `${process.env.PUBLIC_URL}/assets/Ladakhcomp.jpg`
+  },
+  {
+    name: "Goa",
+    img: `${process.env.PUBLIC_URL}/assets/goacomp.jpg`
+  }
+];
 
-    <section
-      className="destination"
-      id="destination"
-    >
+return (
 
-      <h2>Popular Destinations</h2>
+<section
+  id="destination"
+  className="destination"
+  style={{
+    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/destinationbg.jpg)`
+  }}
+>
 
-      <div className="cards">
+<div className="destination-overlay-top"></div>
 
-        <div className="card">
-          Goa
-        </div>
+<h2 className="destination-heading">
+Popular Destinations
+</h2>
 
-        <div className="card">
-          Rajasthan
-        </div>
+<div className="destination-cards">
 
-        <div className="card">
-          Kerala
-        </div>
+{destinations.map((place, i) => (
 
-      </div>
+<div key={i} className="destination-card">
 
-    </section>
+<img src={place.img} alt={place.name} />
 
-  );
+<div className="card-overlay">
+<h3>{place.name}</h3>
+</div>
+
+</div>
+
+))}
+
+</div>
+
+<div className="destination-overlay-bottom"></div>
+
+</section>
+
+);
 
 }

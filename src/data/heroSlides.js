@@ -21,7 +21,7 @@ const heroSlides = [
       "Experience royal palaces, golden deserts and timeless heritage of Rajasthan.",
 
     images: [
-  process.env.PUBLIC_URL + "/assets/raj-4.png",
+  process.env.PUBLIC_URL + "/assets/raj-4.jpg",
   process.env.PUBLIC_URL + "/assets/raj-3.png",
   process.env.PUBLIC_URL + "/assets/raj-2.png",
   process.env.PUBLIC_URL + "/assets/raj-1.png"
