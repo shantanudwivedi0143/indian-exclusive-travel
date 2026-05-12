@@ -70,7 +70,7 @@ html, body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 9999;
 
   display: flex;
   justify-content: space-between;
@@ -92,7 +92,7 @@ html, body {
   display: flex;
   gap: 10px;
 
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.42);
   backdrop-filter: blur(5px);
 
   border-radius: 20px;
@@ -608,16 +608,3 @@ body {
 .back-2 { z-index: 3; }
 .back-1 { z-index: 4; }
 
-.about {
-
-  position: relative;
-
-  background: black;
-
-  color: white;
-
-  padding: 120px 8%;
-
-  z-index: 20;
-
-}
