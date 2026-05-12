@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/indian-exclusive-travel/static/css/main.c9ba300e.css",
-    "main.js": "/indian-exclusive-travel/static/js/main.28a25837.js",
+    "main.css": "/indian-exclusive-travel/static/css/main.0febdb8a.css",
+    "main.js": "/indian-exclusive-travel/static/js/main.6ea39944.js",
     "index.html": "/indian-exclusive-travel/index.html",
-    "main.c9ba300e.css.map": "/indian-exclusive-travel/static/css/main.c9ba300e.css.map",
-    "main.28a25837.js.map": "/indian-exclusive-travel/static/js/main.28a25837.js.map"
+    "main.0febdb8a.css.map": "/indian-exclusive-travel/static/css/main.0febdb8a.css.map",
+    "main.6ea39944.js.map": "/indian-exclusive-travel/static/js/main.6ea39944.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9ba300e.css",
-    "static/js/main.28a25837.js"
+    "static/css/main.0febdb8a.css",
+    "static/js/main.6ea39944.js"
   ]
 }
