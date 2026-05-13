@@ -82,8 +82,9 @@ html, body {
 /* LOGO */
 
 .logo {
-  width: 140px;
+  width: 53.5px;
   z-index: 21;
+  border-radius: 30px;
 }
 
 /* NAVBAR */

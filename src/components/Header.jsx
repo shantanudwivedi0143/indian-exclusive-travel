@@ -9,7 +9,7 @@ export default function Header() {
     <header className="header">
 
       <img
-        src="/assets/logo.png"
+        src={`${process.env.PUBLIC_URL}/assets/IndianExclusiveTravelLogo.png`}
         className="logo"
         alt="logo"
       />
